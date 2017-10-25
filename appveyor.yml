@@ -1,0 +1,9 @@
+environment:
+  nodejs_version: "6"
+install:
+  - npm install -g npm
+  - npm install -g patkub/greenkeeper-lockfile#appveyor
+before_build:
+  - greenkeeper-lockfile-update
+after_build:
+  - greenkeeper-lockfile-upload
