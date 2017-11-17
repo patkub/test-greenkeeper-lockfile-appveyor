@@ -5,7 +5,8 @@ environment:
 # Install scripts. (runs after repo cloning)
 install:
   - npm install -g npm
-  - npm install -g patkub/greenkeeper-lockfile#appveyor
+  - npm install -g patkub/greenkeeper-lockfile#appveyor-msys
+  - npm install --no-save patkub/greenkeeper-lockfile#appveyor-msys
 
 # Post-install test scripts.
 test_script:
@@ -13,8 +14,8 @@ test_script:
   - node --version
   - npm --version
   # greenkeeper lockfile
-  - greenkeeper-lockfile-update
-  - greenkeeper-lockfile-upload
+  - 'C:\MinGW\msys\1.0\bin\sh greenkeeper-lockfile-update'
+  - 'C:\MinGW\msys\1.0\bin\sh greenkeeper-lockfile-upload'
 
 # Don't actually build.
 build: off
