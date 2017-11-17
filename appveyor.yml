@@ -6,7 +6,6 @@ environment:
 install:
   - npm install -g npm
   - npm install -g patkub/greenkeeper-lockfile#appveyor-msys
-  - npm install patkub/greenkeeper-lockfile#appveyor-msys
 
 # Post-install test scripts.
 test_script:
