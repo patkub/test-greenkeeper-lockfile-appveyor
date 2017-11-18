@@ -6,16 +6,16 @@ environment:
 install:
   - npm install -g npm
   - npm install -g patkub/greenkeeper-lockfile#appveyor-msys
-  - npm install --no-save patkub/greenkeeper-lockfile#appveyor-msys
 
 # Post-install test scripts.
 test_script:
   # Output useful info for debugging.
   - node --version
   - npm --version
+  
   # greenkeeper lockfile
-  - 'C:\MinGW\msys\1.0\bin\sh greenkeeper-lockfile-update'
-  - 'C:\MinGW\msys\1.0\bin\sh greenkeeper-lockfile-upload'
+  - bash -c "node C:/Users/appveyor/AppData/Roaming/npm/node_modules/greenkeeper-lockfile/update.js"
+  - bash -c "node C:/Users/appveyor/AppData/Roaming/npm/node_modules/greenkeeper-lockfile/upload.js"
 
 # Don't actually build.
 build: off
