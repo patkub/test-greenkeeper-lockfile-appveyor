@@ -15,6 +15,9 @@ test_script:
   
   # greenkeeper lockfile
   - 'C:\MinGW\msys\1.0\bin\bash -c "node C:/Users/appveyor/AppData/Roaming/npm/node_modules/greenkeeper-lockfile/update.js"'
+  - git status
+  - git diff
+  - git diff --cached
   - 'C:\MinGW\msys\1.0\bin\bash -c "node C:/Users/appveyor/AppData/Roaming/npm/node_modules/greenkeeper-lockfile/upload.js"'
 
 # Don't actually build.
