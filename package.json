@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "bs4-polymer": "0.2.3"
+    "bs4-polymer": "0.2.22"
   }
 }
