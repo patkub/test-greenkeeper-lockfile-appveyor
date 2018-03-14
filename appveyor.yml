@@ -1,3 +1,6 @@
+# Linux ubuntu image
+image: ubuntu
+
 # Test against the latest version of this Node.js version
 environment:
   nodejs_version: "6"
@@ -5,7 +8,7 @@ environment:
 # Install scripts. (runs after repo cloning)
 install:
   - npm install -g npm
-  - npm install -g patkub/greenkeeper-lockfile#appveyor-msys
+  - npm install -g patkub/greenkeeper-lockfile#appveyor-ci-service
 
 # Post-install test scripts.
 test_script:
@@ -14,11 +17,8 @@ test_script:
   - npm --version
   
   # greenkeeper lockfile
-  - 'C:\MinGW\msys\1.0\bin\bash -c "cd C:/projects/test-greenkeeper-lockfile-appveyor/ && node C:/Users/appveyor/AppData/Roaming/npm/node_modules/greenkeeper-lockfile/update.js"'
-  - git status
-  - git diff
-  - git diff --cached
-  - 'C:\MinGW\msys\1.0\bin\bash -c "cd C:/projects/test-greenkeeper-lockfile-appveyor/ && node C:/Users/appveyor/AppData/Roaming/npm/node_modules/greenkeeper-lockfile/upload.js"'
+  - greenkeeper-lockfile-update
+  - greenkeeper-lockfile-upload
 
 # Don't actually build.
 build: off

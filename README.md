@@ -5,4 +5,5 @@ Attempts to get `greenkeeper-lockfile` working in AppVeyor CI.
 https://github.com/greenkeeperio/greenkeeper-lockfile/pull/80
 
 Branches:
+* [master](https://github.com/patkub/test-greenkeeper-lockfile-appveyor/tree/master) Test [AppVeyor for Linux](https://www.appveyor.com/docs/getting-started-with-appveyor-for-linux/) configuration.
 * [msys-bash-node](https://github.com/patkub/test-greenkeeper-lockfile-appveyor/tree/msys-bash-node) Failed attempt to get exec to spawn a new instance of the current shell (bash).
