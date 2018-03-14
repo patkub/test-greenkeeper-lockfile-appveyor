@@ -1,14 +1,22 @@
 {
   "name": "test-greenkeeper-lockfile-appveyor",
   "version": "1.0.0",
-  "description": "",
+  "description": "test greenkeeper-lockfile appveyor implementation",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patkub/test-greenkeeper-lockfile-appveyor.git"
+  },
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "bs4-polymer": "0.2.3"
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/patkub/test-greenkeeper-lockfile-appveyor/issues"
+  },
+  "homepage": "https://github.com/patkub/test-greenkeeper-lockfile-appveyor#readme",
+  "dependencies": {
+    "test-greenkeeper-lockfile-appveyor-package": "1.0.0"
   }
 }
