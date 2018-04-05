@@ -11,7 +11,7 @@ install:
   - nvm install $nodejs_version
   
   # Install modules
-  - npm install -g patkub/greenkeeper-lockfile#appveyor-ci-service
+  - npm install -g patkub/greenkeeper-lockfile#appveyor-ci-service-shell
 
 # Post-install test scripts.
 test_script:
@@ -19,7 +19,9 @@ test_script:
   - node --version
   - npm --version
   - which bash
-  - sh: which bash
+
+  # set shell to use
+  - export GK_LOCK_SHELL='/bin/bash'
   
   # run greenkeeper lockfile in bash shell
   - sh: greenkeeper-lockfile-update
