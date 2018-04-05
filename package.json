@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/patkub/test-greenkeeper-lockfile-appveyor#readme",
   "dependencies": {
-    "test-greenkeeper-lockfile-appveyor-package": "1.0.0"
+    "test-greenkeeper-lockfile-appveyor-package": "1.0.4"
   }
 }
