@@ -19,9 +19,9 @@ test_script:
   - node --version
   - npm --version
   
-  # greenkeeper lockfile
-  - greenkeeper-lockfile-update
-  - greenkeeper-lockfile-upload
+  # run greenkeeper lockfile in bash shell
+  - sh: greenkeeper-lockfile-update
+  - sh: greenkeeper-lockfile-upload
 
 # Don't actually build.
 build: off
