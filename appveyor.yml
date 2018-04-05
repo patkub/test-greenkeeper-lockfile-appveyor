@@ -18,6 +18,8 @@ test_script:
   # Output useful info for debugging.
   - node --version
   - npm --version
+  - which bash
+  - sh: which bash
   
   # run greenkeeper lockfile in bash shell
   - sh: greenkeeper-lockfile-update
