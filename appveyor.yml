@@ -11,7 +11,7 @@ install:
   - nvm install $nodejs_version
   
   # Install modules
-  - npm install -g patkub/greenkeeper-lockfile#appveyor-ci-service-shell
+  - npm install -g patkub/greenkeeper-lockfile#appveyor-stdio-ignore
 
 # Post-install test scripts.
 test_script:
