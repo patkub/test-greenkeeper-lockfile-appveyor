@@ -19,9 +19,6 @@ test_script:
   - node --version
   - npm --version
   - which bash
-
-  # set shell to use
-  - export GK_LOCK_SHELL='/bin/bash'
   
   # run greenkeeper lockfile in bash shell
   - sh: greenkeeper-lockfile-update
