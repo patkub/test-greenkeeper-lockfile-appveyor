@@ -1,16 +1,10 @@
-# Linux ubuntu image
-image: ubuntu
-
 # Test against the latest version of this Node.js version
 environment:
   nodejs_version: "6"
 
 # Install scripts. (runs after repo cloning)
 install:
-  # Install the latest specified version of Node.js
-  - nvm install $nodejs_version
-  
-  # Install modules
+  - npm install -g npm
   - npm install -g patkub/greenkeeper-lockfile#appveyor-ignore-output
 
 # Post-install test scripts.
@@ -18,11 +12,9 @@ test_script:
   # Output useful info for debugging.
   - node --version
   - npm --version
-  - which bash
-  
-  # run greenkeeper lockfile in bash shell
-  - sh: greenkeeper-lockfile-update
-  - sh: greenkeeper-lockfile-upload
+  # greenkeeper lockfile
+  - greenkeeper-lockfile-update
+  - greenkeeper-lockfile-upload
 
 # Don't actually build.
 build: off
