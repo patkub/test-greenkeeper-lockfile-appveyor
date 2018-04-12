@@ -13,8 +13,8 @@ test_script:
   - node --version
   - npm --version
   # greenkeeper lockfile
-  - 'C:\MinGW\msys\1.0\bin\bash -c "cd C:/projects/test-greenkeeper-lockfile-appveyor/ && node C:/Users/appveyor/AppData/Roaming/npm/node_modules/greenkeeper-lockfile/update.js"'
-  - 'C:\MinGW\msys\1.0\bin\bash -c "cd C:/projects/test-greenkeeper-lockfile-appveyor/ && node C:/Users/appveyor/AppData/Roaming/npm/node_modules/greenkeeper-lockfile/upload.js"'
-
+  - bash -c "node C:/Users/appveyor/AppData/Roaming/npm/node_modules/greenkeeper-lockfile/update.js"
+  - bash -c "node C:/Users/appveyor/AppData/Roaming/npm/node_modules/greenkeeper-lockfile/upload.js"
+  
 # Don't actually build.
 build: off
