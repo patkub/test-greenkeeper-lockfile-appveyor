@@ -12,6 +12,7 @@ test_script:
   # Output useful info for debugging.
   - node --version
   - npm --version
+  - echo %APPVEYOR_JOB_NUMBER%
   # greenkeeper lockfile
   - greenkeeper-lockfile-update
   - greenkeeper-lockfile-upload
