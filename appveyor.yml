@@ -12,7 +12,12 @@ test_script:
   # Output useful info for debugging.
   - node --version
   - npm --version
-  - echo %APPVEYOR_JOB_NUMBER%
+  
+  # Output environment variables used in greenkeeper lockfile appveyor implementation
+  - echo %APPVEYOR_REPO_NAME%
+  - echo %APPVEYOR_REPO_BRANCH%
+  - echo %APPVEYOR_PULL_REQUEST_NUMBER%
+  
   # greenkeeper lockfile
   - greenkeeper-lockfile-update
   - greenkeeper-lockfile-upload
